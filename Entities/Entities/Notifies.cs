@@ -11,7 +11,7 @@ namespace Entities.Entities
     {
         public Notifies()
         {
-            notifications = new List<Notifies>();
+            Notifications = new List<Notifies>();
         }
 
         [NotMapped]
@@ -21,13 +21,13 @@ namespace Entities.Entities
         public string message { get; set; }
 
         [NotMapped]
-        public List<Notifies> notifications { get; set; }
+        public List<Notifies> Notifications { get; set; }
 
         public bool validatePropertyString(string value, string propertyName)
         {
             if(string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(nameProperty))
             {
-                notifications.Add(new Notifies
+                Notifications.Add(new Notifies
                 {
                     message = "Campo Obrigatório",
                     nameProperty = propertyName
@@ -41,7 +41,7 @@ namespace Entities.Entities
         {
             if (value <= 0 || string.IsNullOrWhiteSpace(nameProperty))
             {
-                notifications.Add(new Notifies
+                Notifications.Add(new Notifies
                 {
                     message = "Campo Obrigatório",
                     nameProperty = propertyName
