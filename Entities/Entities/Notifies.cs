@@ -25,7 +25,7 @@ namespace Entities.Entities
 
         public bool validatePropertyString(string value, string propertyName)
         {
-            if(string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(nameProperty))
+            if(string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(propertyName))
             {
                 Notifications.Add(new Notifies
                 {
